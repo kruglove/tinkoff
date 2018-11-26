@@ -14,6 +14,8 @@ class HttpClient(object):
 
     def del_sub(self, request_id, system_code, sub_id):
         url = self.base_url + '/contacts/e.kruglova/subscriptions/'+sub_id+'?request_id==' + request_id + '&system_code=' + system_code
-        response = requests.get(url, headers=self.headers)
+        response = requests.delete(url, headers=self.headers)
         return response
+
+
 
